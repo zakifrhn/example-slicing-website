@@ -1,0 +1,429 @@
+*,
+html,
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+:root{
+    --color-primary:#5F2EEA;
+    --color-secondary: #F7F7FC;
+    --color-border: #E5E5E5;
+    --color-label: #4E4B66;
+    --color-font: #8692A6;
+}
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.icon{
+    width: 80%;
+    margin-top: 3em;
+    /* margin-bottom: 3em; */
+}
+
+.icon img{
+    display: fixed;
+    width: 80px;
+    height: 25px;
+}
+
+
+.sign-up{
+    margin-top: 30px;
+    width: 80%;
+    margin-bottom:40px;
+}
+
+h3{
+    margin-bottom: 10px;
+}
+
+
+.sign-up .btm-h3{
+    color: var(--color-font)
+}
+
+
+.form-sign-up{
+    width: 80%;
+}
+
+
+.form-sign-up .label-email{
+    font-weight: bold;
+    color: var(--color-label);
+}
+
+
+.form-sign-up .email{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+
+.form-sign-up .label-pass{
+    font-weight: bold;
+    color: var(--color-label);
+}
+
+
+.form-sign-up .pass{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    width: 90%;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+
+footer span{
+    color: var(--color-font);
+}
+
+.sign-in .forgot{
+    font-size: 18px;
+}
+
+.sign-in .dhv{
+    font-size: 13px;
+}
+
+@media screen and (max-width: 400px) {
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        align-items: center;
+        /*padding-top: 80%;
+        padding-bottom: 20%; */
+    }
+
+    .banner{
+        display: none;
+    }
+
+    .banner-2{
+        justify-content: space-around;
+        width: 80%;
+    }
+    
+    .icon img{
+        z-index: 9999;
+        top: 0;
+    }
+
+
+    .sign-up p{
+        color: var(--color-font);
+    }
+
+    .form-sign-up{
+        width: 100%;
+    }
+
+    .form-sign-up .f-name{
+        width: 100%;
+    }
+
+    .btn-sign-up{
+        width: 100%;
+    }
+
+    footer{
+        /* padding-left: 15%; */
+        margin-top: 1.5em;
+        padding-bottom: 10%;
+    }
+
+}
+
+
+@media screen and (min-width: 401px) and (max-width: 780px) {
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        align-items: center;
+        /*padding-top: 80%;
+        padding-bottom: 20%; */
+    }
+
+    .banner{
+        display: none;
+    }
+
+    .banner-2{
+        justify-content: space-around;
+        width: 80%;
+    }
+    
+    .icon img{
+        z-index: 9999;
+        top: 0;
+    }
+
+
+    .sign-up p{
+        color: var(--color-font);
+    }
+
+    .form-sign-up{
+        width: 100%;
+    }
+
+    .form-sign-up .f-name{
+        width: 100%;
+    }
+
+    .btn-sign-up{
+        width: 100%;
+    }
+
+    footer{
+        /* padding-left: 15%; */
+        margin-top: 1.5em;
+        padding-bottom: 10%;
+    }
+
+}
+
+
+
+/* 780px - 1024 || ipad-tablet potrait*/
+@media screen and (min-width: 781px) and (max-width: 1280px) {
+    
+    .container{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    }
+
+    .banner{
+        overflow: visible;
+        background-color: #5F2EEA;
+        background-image: url('./src/Rectangle\ 1.png');
+        background-repeat: repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1 / span 4;
+
+    }
+
+    .icon-font{
+        margin: 0 auto;
+        width: 40%;
+    }
+
+    .icon-font img{
+        width: 100%;
+    }
+
+
+    .icon-extras{
+        margin: 0 auto;
+        width: 20%;
+    }
+
+    .icon-extras img{
+        width: 100%;
+    }
+
+    .banner-2{
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        grid-column: 5 / span 6;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon img{
+        display: none;
+    }
+
+    .sign-up{
+        margin-top: 20%;
+        /* width: 80%; */
+        margin-bottom: 40px;
+    }
+
+    h3{
+        font-size: 45px;
+        margin-bottom: 5%;
+    }
+
+    .sign-up p{
+        color: var(--color-font);
+    }
+    .form-sign-up{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+
+    .form-sign-up .email{
+        padding: 20px;
+    }
+
+    .form-sign-up .pass{
+        padding: 20px;
+    }
+
+    .btn-sign-up{
+        margin-top: 1%;
+        width: 100%;
+    }
+
+    footer{
+        margin-top: 2em;
+        margin-bottom: 10px;
+    }
+
+    
+    .sign-in .forgot{
+        font-size: 16px;
+    }
+
+    .sign-in .dhv{
+        font-size: 13px;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1280px){
+    
+    .container{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    }
+
+    .banner{
+        overflow: visible;
+        background-color: #5F2EEA;
+        background-image: url('./src/Rectangle\ 1.png');
+        background-repeat: repeat;
+        grid-column: 1 / span 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .icon-font{
+        margin: 0 auto;
+        width: 40%;
+    }
+
+    .icon-font img{
+        width: 100%;
+    }
+
+
+    .icon-extras{
+        margin: 0 auto;
+        width: 20%;
+    }
+
+    .icon-extras img{
+        width: 100%;
+    }
+
+    .banner-2{
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        grid-column: 5 / span 6;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon img{
+        display: none;
+    }
+
+    .sign-up{
+        margin-top: 20%;
+        /* width: 80%; */
+        margin-bottom: 40px;
+    }
+
+    h3{
+        font-size: 45px;
+        margin-bottom: 5%;
+    }
+
+    .sign-up p{
+        color: var(--color-font);
+    }
+    .form-sign-up{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+
+    .form-sign-up .email{
+        padding: 20px;
+    }
+
+    .form-sign-up .pass{
+        padding: 20px;
+    }
+
+    .btn-sign-up{
+        margin-top: 1%;
+        width: 100%;
+    }
+
+    footer{
+        margin-top: 2em;
+        margin-bottom: 10px;
+    }
+
+    .sign-in .forgot{
+        font-size: 18px;
+    }
+
+    .sign-in .dhv{
+        font-size: 15px;
+    }
+
+}
