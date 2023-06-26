@@ -1,5 +1,8 @@
 # example-slicing-website
 
+url this website : https://slicing-website-tickitz.netlify.app
+
+
 the bottom is preview from my project exmample slicing website movie ticket booking has named is 'Tickitz' || dibawah ini adalah pratinjau dari contoh projek slicing website pemesanan tiket bioskop yang bernama "Tickitz"
 
 this is code for example slicing in website used to bootstrap, some piece css and Tailwind. For media query i'm using css and bootstrap.. in bootsrap media query is md and ld || kode dari slicing website ini menggunakan framework bootstrap, sedikit css dan juga tailwind. untuk media responsive layar nya menggunakan css dan bootsrap, pada bootsrap meda responsive nya di ukuran 'md' dan 'lg'
