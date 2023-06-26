@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Profile</title>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: "#5F2EEA",
+                secondary: "#F7F7FC",
+                border: "#E5E5E5",
+                label: "#4E4B66",
+                font: "#8692A6",
+                backgroundColor: "#F5F6F8",
+              },
+              borderWidth:{
+                DEFAULT: '1px',
+                '0': '0',
+                '2': '2px',
+                '3': '3px',
+                '4': '4px',
+                '6': '6px',
+                '8': '8px',
+              },
+              screens: {
+                'xs': '320px',
+                'sm': '560px',
+                'md': '760px',
+                'lg': '1024px',
+                'xl': '1400px',
+                '2xl': '1800px'
+                // => @media (min-width: 576px) { ... }
+            }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="bg-backgroundColor">
+    <header class="bg-white border rounded-lg w-full px-10">
+
+        <nav class="w-full md:flex md:flex-row md:justify-between md:items-center xs:flex xs:flex-row xs:justify-between xs:items-center  md:px-5 py-5">
+
+            <div class="brand-md-menu hidden md:flex md:flex-row md:items-center md:gap-x-10">
+
+                <img src="./assets/logo.png" alt="">
+
+                <div class="md-menu md:flex md:flex-row md:gap-x-7">
+                    <a href="index.html">Home</a>
+                    <a href="view-all-page.html">List Movie</a>
+                </div>
+
+            </div>
+
+            <div class="search-md-logo-profile hidden md:flex md:w-8 md:h-8 md:me-10 md:items-center">
+
+                <button class="modal-open">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>      
+                </button>
+
+                <button class="btn-dropdown-profile">
+                    <img src="./assets/profile.png" class="md:w-8 md:h-8 md:ms-7" alt="">
+                </button>
+                
+            </div>
+
+
+             <!--Modal-->
+          <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+            <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+            
+            <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+              
+              <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+                <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                  <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                </svg>
+                <span class="text-sm">(Esc)</span>
+              </div>
+        
+              <!-- Add margin if you want to see some of the overlay behind the modal-->
+              <div class="modal-content py-4 text-left px-6">
+                <!--Title-->
+                <div class="flex justify-between items-center pb-3">
+                  <form action="" class="w-full"> 
+                    <input type="text" class="border border-border p-2 text-center w-4/5 rounded-lg" placeholder="Search ...">    
+                    <svg class="w-4 h-4 -mt-7 ms-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>                  
+                  </form>
+                  <div class="modal-close cursor-pointer z-50">
+                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                      <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                 <!--Footer-->
+                 <div class="flex justify-end pt-2">
+                    <button class="px-4 bg-transparent p-1 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2">Search</button>
+                    <button class="modal-close px-4 bg-indigo-500 p-1 rounded-lg text-white hover:bg-indigo-400">Close</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+ 
+
+            <!-- button nav-mobile -->
+
+            <div class="brand-xs md:hidden xs:flex">
+                <img src="./assets/logo.png" alt="">
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-slate-950 "
+                        x-show="!showMenu"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- menu in nav mobile -->
+
+        <div class="mobile-menu hidden xs:w-full xs:gap-y-3">
+            <div class=" xs:text-center">
+                <form action="" class="xs:py-3">
+                    <input type="text" class="border border-border rounded-md  xs:p-1 xs:ps-3 xs:w-4/5" placeholder="Search">
+                </form>
+                <span class="xs:block border-t-2 border-border xs:py-2">
+                    <a href="index.html">Home</a>
+                </span>
+                <span class="xs:block border-t-2 border-border xs:py-2">
+                    <a href="view-all-page.html">List Movie</a>
+                </span>
+                <span class="xs:block border-t-2 border-border xs:py-2 xs:items-center">
+                    <a href="#">Admin</a>
+                    <button class="admin-dropdown">
+                        <svg class="xs:w-3 xs:h-3" xmlns="http://www.w3.org/2000/svg " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                          
+                    </button>
+
+                    <div class="menu-admin-dropdown hidden xs:py-3 xs:text-xs xs:w-4/5 xs:mx-auto">
+                        <span>
+                            <a href="#" class="xs:block xs:py-2 border-y-2">Manage Movie</a>
+                        </span>
+                        <span>
+                            <a href="#" class="xs:block xs:py-2">Manage Schedule</a>
+                        </span>
+                    </div>
+
+                </span>
+                <span class="xs:block border-t-2 border-border xs:py-2">
+                    <a href="profile.html">Profile</a>
+                </span>
+                <span class="xs:block border-t-2 border-border xs:py-2">
+                    <a href="sign-in-page.html">Logout</a>
+                </span>
+
+            </div>
+        </div>
+
+        <div class="info-payment md:hidden xs:flex xs:flex-row xs:justify-between xs:pb-3 xs:mt-5">
+            <p class="font-medium text-sm border-b border-primary pb-2"><a href="#" class="no-underline">Details Account</a></p>
+            <p class="text-font font-mono"><a href="order-history-page.html" class="no-underline">Order History</a></p>
+        </div>
+
+    </header>
+
+    <div class="md-wrapper-menu pe-10 hidden flex justify-end w-full -mt-7">
+        <div class="md-box-menu md:w-32 bg-white rounded-md md:px-7 md:py-2">
+            <span class>
+                <a href="profile.html" class="block">Profile</a>
+            </span>
+
+            <span>
+                <a href="sign-in-page.html">Logout</a>
+            </span>
+        </div>
+    </div>
+
+    <section class="ms-8 me-8  md:mt-10 xs:mt-10">
+        <main class="md:grid md:grid-cols-5 md:gap-x-8 xs:flex xs:flex-col">
+
+            <div class="profile md:max-h-80 xl:max-h-96 md:col-start-1 md:col-span-2 border rounded-md bg-white xs:p-3">
+                <div class="info md:pt-5 md:ps-8 md:text-sm md:mb-7 xs:ps-3 xs:text-xs">
+                    <p class="md:text-xs text-font font-sans">INFO</p>
+                </div>
+
+                <div class="img-profile md:mb-7 xs:mb-7">
+                    <img src="./assets/profile.png" class="md:rounded-full md:mx-auto md:w-1/4 xs:mx-auto xs:w-20" alt="">
+                </div>
+
+                <div class="name-profile md:text-center">
+                    <p class="md:text-base md:font-bold xs:text-center">Jomi Rodriguez</p>
+                    <p class="md:text-xs text-font xs:text-center">moviegoers</p>
+                </div>
+
+                <div class="line-profile md:w-full md:mt-5 xs:w-full xs:mt-5">
+                    <hr>
+                </div>
+
+                <div class="btn-logout md:mx-auto md:w-3/5 bg-primary rounded-md md:mt-7 md:mb-7 lg:mt-5 xs:ps-2 xs:mx-auto xs:w-48 xs:mt-5 xs:mb-3">
+                    <p class="text-center md:p-2 text-white">Logout</p>
+                </div>
+            </div>
+
+
+            <div class="detail-profile md:col-start-3 md:col-span-5 xs:flex xs:flex-col xs:mt-7">
+
+                <span class="xs:flex md:hidden xs:mb-7">
+                    <a href="">Account Settings</a>
+                </span>
+                
+                <div class="nav-profile bg-white  xs:hidden md:flex md:rounded-md md:flex md:flex-row md:text-sm md:gap-x-10 md:ps-6 md:p-3 md:mb-5 md:-mt-7">
+
+                    <span class="hover:text-font border-b border-primary pb-2">
+                        <a href="#" class="no-underline">Account Settings</a>
+                    </span>
+
+                    <span class="hover:text-font">
+                        <a href="order-history-page.html" class="no-underline">Order History</a>
+                    </span>
+                </div>
+
+                <div class="detail-info bg-white rounded-md md:flex md:flex-col md:p-3 xs:p-3">
+
+                    <div class="part-1 xs:mt-5">
+                        <p class="md:text-sm font-sans xs:font-sm md:-mt-3">Details Information</p>
+                    </div>  
+
+                    <div class="line-profile md:w-full xs:w-full xs:mt-5">
+                        <hr>
+                    </div>
+
+                    <div class="form-detail md:grid md:grid-cols-2 md:grid-rows-2 md:mt-3 md:gap-y-6 gap-x-3 xs:mt-7 xs:flex xs:flex-col xs:gap-y-6 xs:ms-3 xs:me-3 xs:pb-5">
+                        
+                        <div class="form-1 md:col-span-1">
+                            <form action="">
+                                <label for="" class="text-font md:text-xs xs:flex xs:flex-col xs:text-xs">First Name</label>
+                                <input type="text" class="border border-font md:p-2 rounded-md md:ps-3 xs:ps-3 xs:p-2 xs:mt-1 xs:w-full xs:text-xs" placeholder="Name">
+                            </form>
+                        </div>
+
+                        <div class="form-2 md:col-span-1">
+                            <form action="">
+                                <label for="" class="text-font md:text-xs xs:hidden md:flex">Last Name</label>
+                                <input type="text" class="border border-font md:p-1 rounded-md md:ps-3 xs:ps-3 xs:p-2 xs:mt-1 xs:w-full xs:hidden md:flex" placeholder="Name">
+                            </form>
+                        </div>
+
+                        <div class="form-3 md:col-span-1 md:row-span-2 xs:-mt-8 md:-mt-2">
+                            <form action="">
+                                <label for="" class="text-font md:text-xs xs:flex xs:flex-col xs:text-xs">Email</label>
+                                <input type="text" class="border border-font md:p-2 rounded-md md:ps-3 xs:ps-3 xs:p-2 xs:mt-1 xs:w-full xs:text-xs" placeholder="Name">
+                            </form>
+                        </div>
+
+                        <div class="form-4 md:col-span-1 md:row-span-2 xs:-mt-2">
+                            <form action="">
+                                <label for="" class="text-font md:text-xs xs:flex xs:flex-col xs:text-xs">Phone Number</label>
+                                <input type="text" class="border border-font md:p-2 rounded-md md:ps-3 xs:ps-3 xs:p-2 xs:mt-1 xs:w-full xs:text-xs" placeholder="Name">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="btn-change bg-primary rounded-md md:ms-0 md:mt-5 md:p-2 md:w-2/5 xs:mt-6 xs:w-4/5 xs:mx-auto xs:p-1">
+                    <p class="text-white text-center md:text-xs">Update changes</p>
+                </div>
+
+                <div class="account-privacy bg-white md:mt-5 rounded-md md:p-3 md:mt-5 xs:mt-5 xs:p-3">
+                    <div class="part-1 md:mb-5 xs:mb-2 xs:mt-5">
+                        <p class="md:text-xs font-sans xs:text-sm">Account and privacy</p>
+                    </div>  
+
+                    <div class="line-profile md:w-full">
+                        <hr>
+                    </div>
+
+                    <div class="form-account md:flex md:flex-row md:mt-5 md:pb-5 md:gap-x-3 xs:mt-7 xs:flex xs:flex-col xs:gap-y-6 xs:ms-3 xs:me-3 xs:pb-5">
+
+                        <div class="account-1 md:w-3/6">
+                            <form action="">
+                                <label for="" class="text-font md:text-xs xs:flex xs:flex-col xs:text-xs">New Password</label>
+                                <input type="text" class="border border-font md:p-2 rounded-md md:ps-3 md:w-full xs:ps-3 xs:p-2 xs:mt-1 xs:w-full xs:text-xs" placeholder="Write your password">
+                            </form>
+                        </div>
+
+                        <div class="account-1 md:w-3/6">
+                            <form action="">
+                                <label for="" class="text-font md:text-xs xs:flex xs:flex-col xs:text-xs">Confirm</label>
+                                <input type="text" class="border border-font md:p-2 rounded-md md:ps-3 xs:ps-3 xs:p-2 xs:mt-1 xs:w-full xs:text-xs" placeholder="Confirm your password">
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="btn-change bg-primary rounded-md md:ms-0 md:mt-5 md:p-2 md:w-2/5 xs:mt-6 xs:w-4/5 xs:mx-auto xs:p-1">
+                    <p class="text-white text-center md:text-xs">Update changes</p>
+                </div>
+
+            </div>
+        </main>
+    </section>
+
+    <footer class="footer-view-all w-vw ps-8 pe-8 md:pb-12 bg-white md:gap-x-7 ps-5 pe-5 mt-3 pt-7 md:grid md:grid-flow-col lg:gap-x-30 sm:flex sm:flex-col sm:gap-y-7">
+
+        <div class="footer-1 md:flex md:flex-col md:ms-5">
+            <img src="./assets/logo.png" class="md:w-32" alt="">
+            <div class="stop-watch mt-3 text-font md:text-xs xs:text-base font-sans">
+                <p>Stop waiting in line. Buy tickets <br>
+                    conveniently, watch movies quietly.</p>
+            </div>
+        </div>
+    
+        <div class="footer-3 md:flex md:flex-col xs:flex xs:flex-wrap xs:flex-row xs:mt-5 xs">
+            <p class="font-bold md:mb-5 xs:w-full">Explore</p>
+            <p class="text-font md:mb-3 md:text-sm xs:w-2/4">
+                <a href="index.html"  class="no-underline">Home</a>
+            </p>
+            <p class="text-font text-sm md:w-full xs:w-2/4">
+                <a href="view-all-page.html" class="no-underline">List Movie</a>
+            </p>
+        </div>
+    
+        <div class="footer-3 md:gap-y-5 md:flex md:flex-col xs:flex xs:flex-wrap xs:flex-row xs:gap-x-5 xs:mt-5">
+            <p class="font-bold text-sm xs:w-full xs:mb-3">Our Sponsor</p>
+            <img src="./assets/Vector-3.png" class="md:-mt-5 md:w-20 xs:w-16" alt="">
+            <img src="./assets/Vector-2.png" class="md:w-24 xs:w-20" alt="">
+            <img src="./assets/Vector-1.png" class="md:w-20 xs:w-16" alt="">
+        </div>
+    
+        <div class="footer-4 md:gap-y-3 mb-5 md:flex md:flex-col xs:flex xs:flex-row xs:flex-wrap xs:gap-x-5 xs:mt-5 xs:pb-5">
+            <div class="fu font-bold xs:w-full xs:mb-5">Follow Us</div>
+            <span class="fb flex flex-row gap-x-2 md:-mt-5">
+                <img src="./src/fb.png" alt="">
+                <p class="hidden md:flex md:text-xs md:items-center md:ps-2">Tickitz Cinema Id</p>
+            </span>
+            <span class="ig flex flex-row gap-x-2">
+                <img src="./src/icons8-instagram-50.png" class="md:w-5 xs:w-5" alt="">
+                <p class="hidden md:flex md:text-xs md:items-center">Tickitz Cinema Id</p>
+            </span>
+            <span class="tw flex flex-row gap-x-2">
+                <img src="./src/twitter.png" alt="">
+                <p class="hidden md:flex md:text-xs md:items-center">Tickitz Cinema Id</p>
+            </span>
+            <span class="yt flex flex-row gap-x-2">
+                <img src="./src/icons8-youtube-50.png" class="md:w-5 xs:w-5" alt="">
+                <p class="hidden md:flex md:text-xs md:items-center">Tickitz Cinema Id</p>
+            </span>
+        </div>
+    </footer>
+    
+    <p class="copyright md:pb-10 md:-mt-5 md:mb-5 text-center text-sm text-font bg-white text-center xs:-mt-6 xs:pb-5">
+        &copy 2020 Tickitz. All Rights Reserved
+    </p>
+
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+    
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+    
+            const btnAdmin = document.querySelector("button.admin-dropdown");
+            const menuAdmin = document.querySelector(".menu-admin-dropdown");
+    
+            btnAdmin.addEventListener("click", () =>{
+                menuAdmin.classList.toggle('hidden');
+            })
+    
+            const btnLogoMenu = document.querySelector("button.btn-dropdown-profile");
+            const menuInLogo = document.querySelector(".md-wrapper-menu");
+            
+            btnLogoMenu.addEventListener("click", () =>{
+                menuInLogo.classList.toggle('hidden');
+            })
+    </script>
+    
+    <script>
+    var openmodal = document.querySelectorAll('.modal-open')
+    for (var i = 0; i < openmodal.length; i++) {
+    openmodal[i].addEventListener('click', function(event){
+    event.preventDefault()
+    toggleModal()
+    })
+    }
+    
+    const overlay = document.querySelector('.modal-overlay')
+    overlay.addEventListener('click', toggleModal)
+    
+    var closemodal = document.querySelectorAll('.modal-close')
+    for (var i = 0; i < closemodal.length; i++) {
+    closemodal[i].addEventListener('click', toggleModal)
+    }
+    
+    document.onkeydown = function(evt) {
+    evt = evt || window.event
+    var isEscape = false
+    if ("key" in evt) {
+    isEscape = (evt.key === "Escape" || evt.key === "Esc")
+    } else {
+    isEscape = (evt.keyCode === 27)
+    }
+    if (isEscape && document.body.classList.contains('modal-active')) {
+    toggleModal()
+    }
+    };
+    
+    
+    function toggleModal () {
+    const body = document.querySelector('body')
+    const modal = document.querySelector('.modal')
+    modal.classList.toggle('opacity-0')
+    modal.classList.toggle('pointer-events-none')
+    body.classList.toggle('modal-active')
+    }
+    
+    
+    </script>
+</body>
+
+
+</html>

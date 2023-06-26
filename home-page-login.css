@@ -46,6 +46,63 @@
 }
 
 
+@media screen and (max-width: 760px){
+
+    .wrapper-card-movie{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px 20px; 
+    }
+
+    .month-viewing{
+        margin-right: 0.5em;
+        margin-left:0.5em;
+        display: flex;
+        flex-direction: row;
+        gap: 20px 20px;
+    }
+
+    .month-viewing .col{
+        overflow-x: scroll;
+    }
+
+    .wrapper-movie-upcoming{
+        display: flex;
+        flex-direction: column;
+        gap:20px 20px;
+    }
+
+
+    .wrapper-card-join-now .card-body .be-vanguard{
+        font-size:18px;
+    }
+
+    .wrapper-card-join-now .card-body .moviegoers{
+        font-size:24px;
+        margin-bottom:1em;
+    }
+
+    .wrapper-card-join-now .card-body .type-email-join{
+        width: 100%;
+        padding-right: 3em;
+    }
+
+    .wrapper-card-join-now .card-body .card-text{
+        font-size:11px;
+    }
+
+
+    .our-sponsor .os img{
+        width:70%;
+    }
+
+
+    .our-sponsor .os .cineone img, .our-sponsor .os .hiflix img{
+        margin-top: -2.5em;
+    }
+}
+
 
 @media screen and (min-width: 992px){
     

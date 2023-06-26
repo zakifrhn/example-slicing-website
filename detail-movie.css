@@ -1,0 +1,355 @@
+:root{
+    --color-primary:#5F2EEA;
+    --color-secondary: #F7F7FC;
+    --color-border: #E5E5E5;
+    --color-label: #4E4B66;
+    --color-font: #8692A6;
+    --color-background-color: #F5F6F8;
+}
+
+.col-4 .image-details-lg{
+    width: 95%; 
+    border-radius: 5px; 
+    border: 1px solid #E5E5E5;
+}
+
+.col-4 .image-details-lg img{
+    height: 370px;
+}
+
+.wrapper-title-genre .wrapper-wrapper-title-genre{
+    width: 100%;
+}
+
+.wrapper-wrapper-title-genre .title-genre p{
+    color: var(--color-font);
+}
+
+.wrapper-title-genre .info-about-movie{
+    width: 100%;
+}
+
+.box-lg-info .box-info .info-in-top{
+    color: var(--color-font);
+}
+
+.box-lg-info .box-info .info-in-bottom{
+    margin-top: -1em;
+}
+
+.line-1{
+    width: 100%;
+}
+
+.wrapper-lg-synopsis{
+    width: 100%;
+}
+
+.wrapper-lg-synopsis .wrapper-synopsis p{
+    color: black; line-height: 2em;
+}
+
+.wrapper-lg-snt .choose-date form{
+    width: 50%;
+}
+
+.wrapper-lg-snt .choose-date input{
+    width: 100%; 
+    border-radius: 5px; 
+    border: 1px solid var(--color-border);
+}
+
+.wrapper-lg-snt .choose-date .fa-calendar{
+    margin-left: 1em; margin-top: -2em;
+}
+
+.wrapper-lg-snt .choose-date .fa-sort-down{
+    margin-right: 1em; margin-top: -1em;
+}
+
+
+.wrapper-lg-snt .choose-city form{
+    width: 50%;
+}
+
+.wrapper-lg-snt .choose-city input{
+    padding-left: 30px; width: 100%; border-radius: 5px; border: 1px solid #E5E5E5;
+}
+
+.wrapper-lg-snt .choose-city .fa-map-marker{
+    margin-left: 1em; margin-top: -2em;
+}
+
+.wrapper-lg-snt .choose-city .fa-sort-down{
+    margin-right: 1em; margin-top: -1em;
+}
+
+.wrapper-schedule-watch{
+    width: 100%;
+}
+
+.wrapper-schedule-watch .box-box-card{
+    width: 90%;
+}
+
+.box-box-card .wrapper-img-note{
+    width: 100%;
+}
+
+.wrapper-img-note .img-cinema img{
+    width: 107px; height: 40px;
+}
+
+.wrapper-img-note .wrapper-note{
+    width: 100%;
+}
+
+.wrapper-note .cinema-name{
+    width: 100%; font-weight: bold;
+}
+
+.wrapper-note .cinema-address{
+    color: var(--color-font); width: 100%; margin-top: -1em;
+}
+
+.line-2{
+    width: 100%; margin-top: -0.5em;
+}
+
+.wrapper-movie-show-time{
+    width: 100%;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+.wrapper-movie-show-time .box-show-time{
+    width: 100%;
+}
+
+.box-show-time .sold-out-time{
+    color: #8692A6;
+}
+
+.wrapper-price-seat .price-lg{
+    color: #8692A6; font-weight: bold; width: 50%;
+}
+
+.wrapper-price-seat .seat-lg{
+    font-weight: bold; margin-top: -2.5em; 
+}
+
+.wrapper-btn-book-lg{
+    width: 90%;
+}
+
+.wrapper-btn-book-lg .book-now{
+    width: 100%; border-radius: 5px; border: none; background-color: #5F2EEA; color: aliceblue;
+}
+
+.line-3-view-more .line-f{
+    border-bottom: 1px solid rgba(222, 222, 222, 1); width: 45%;
+}
+
+.line-3-view-more p{
+    width: 10%; color: #5F2EEA; font-weight: bold;
+}
+
+.line-3-view-more .line-l{
+    border: 1px solid rgba(222, 222, 222, 1); width: 40%;
+}
+
+
+
+
+/* Part for mobile and Ipad */
+
+.navbar-md form{
+    width: 100%;
+}
+
+.navbar-md input{
+    width: 50%; color: #8692A6;
+}
+
+.navbar-md ul{
+    width: 100%;
+}
+
+.navbar-md p{
+    color: #8692A6;
+}
+
+.wrapper-movie-details{
+    width: 100%;
+}
+
+.wrapper-movie-details .wrapper-md-img{
+    width: 100%;
+}
+
+.wrapper-md-img .images-detail-md{
+    width: 100%;
+}
+
+.images-detail-md img{
+    border: 1px solid #E5E5E5; border-radius: 5px;
+}
+
+.box-title-genre-md .title-movie-md{
+    font-weight: bold;
+}
+
+.box-title-genre-md .genre-md{
+    color: #8692A6;
+}
+
+.movie-details-md .info-in-top-md{
+    color: #8692A6;
+}
+
+.movie-details-md .info-in-bottom-md{
+    margin-top: -1em; letter-spacing: 2px;
+}
+
+.line-1-md{
+    width: 100%;
+}
+
+.wrapper-synopsis-md .synopsis-details{
+    color: #8692A6; line-height: 2em;
+}
+
+.box-snt-md{
+    width: 100%;
+}
+
+.box-snt-md form{
+    width: 50%;
+}
+
+.box-snt-md .choose-date-md{
+    width: 100%; border-radius: 5px; border: 1px solid #E5E5E5;
+}
+
+.box-snt-md .fa-calendar{
+    margin-left: 1em; margin-top: -2em;
+}
+
+.box-snt-md .fa-sort-down{
+    margin-right: 1em; margin-top: -1em;
+}
+
+.box-snt-md .choose-city-md{
+    padding-left: 30px; width: 100%; border-radius: 5px; border: 1px solid #E5E5E5;
+}
+
+.box-snt-md .fa-map-marker{
+    margin-left: 1em; margin-top: -2em;
+}
+
+.wrapper-schedule-watch-md{
+    width: 100%;
+}
+
+.wrapper-schedule-watch-md  .wrapper-wrapper-schedule-watch-md{
+    width: 100%;
+}
+
+.wrapper-wrapper-schedule-watch-md .box-card-md{
+    width: 90%;
+}
+
+.cinema-name-md img{
+    width: 107px; height: 40px;
+}
+
+.cinema-address-md{
+    width: 100%;
+}
+
+.cinema-address-md p{
+    color: #8692A6; width: 100%;
+}
+
+.line-2-md{
+    width: 100%; margin-top: -0.5em;
+}
+
+.wrapper-movie-watch-md{
+    width: 100%;
+}
+
+.wrapper-movie-watch-md .box-show-time-md{
+    width: 100%;
+}
+
+.box-show-time-md .sold-out-time{
+    color: #8692A6;
+}
+
+.wrapper-price-seat-md .price-md{
+    margin-left: 2.3em; color: #8692A6; font-weight: bold; width: 50%;
+}
+
+.wrapper-price-seat-md .seat-md{
+    margin-right:2.3em; font-weight: bold; margin-top: -2.5em;
+}
+
+.btn-book-md{
+    width: 90%;
+}
+
+.btn-book-md .book-now-md{
+    width: 100%; border-radius: 5px; border: none; background-color: #5F2EEA; color: aliceblue;
+}
+
+.line-3-md .line-f{
+    border-bottom: 1px solid rgba(222, 222, 222, 1); width: 30%;
+}
+
+.line-3-md p{
+    width: 15%; color: #5F2EEA; font-weight: bold;
+}
+
+.line-3-md .line-l{
+    border: 1px solid rgba(222, 222, 222, 1); width: 35%;
+}
+
+@media screen and (max-width: 760px){
+    *,html,body{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+
+    .wrapper-movie-watch-md .box-show-time-md .col p{
+        font-size: 15px;
+    }
+
+    .wrapper-price-seat-md .price-md, .wrapper-price-seat-md .seat-md{
+        font-size: 13px;
+    }
+
+    .btn-book-md{
+        width: 100%;
+        padding-right:3em;
+    }
+
+    .line-3-md{
+        width: 100%;
+        padding-right: 3em;
+    }
+
+    .line-3-md p{
+        font-size: 13px;
+    }
+
+    .our-sponsor .os img{
+        width:70%;
+    }
+
+
+    .our-sponsor .os .cineone img, .our-sponsor .os .hiflix img{
+        margin-top: -2.5em;
+    }
+}

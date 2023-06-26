@@ -28,7 +28,7 @@
                     <a class="nav-link text-dark" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">List Movie</a>
+                    <a class="nav-link text-dark" href="view-all-page.html">List Movie</a>
                   </li>
                 </ul>
                 <form class="d-flex me-5" role="search">
@@ -63,7 +63,7 @@
                     <div class="collapse mt-3 p-3" style="border: 1px solid grey; border-radius: 5px;" id="navbarAccount" >
 
                         <p>
-                            <a class="nav-link text-dark" aria-current="page" href="#">Profile</a>
+                            <a class="nav-link text-dark" aria-current="page" href="profile.html">Profile</a>
                         </p>
 
                         <p>
@@ -112,7 +112,7 @@
   
                 <div class="col mt-3 d-flex justify-content-end">
                   <div class="view-all">
-                    <p>view all</p>
+                    <p><a href="view-all-page.html" class="text-decoration-none text-#5F2EEA">view all</a></p>
                   </div>
                 </div>
               </div>
@@ -128,7 +128,7 @@
                         <div class="card-body">
                             <p class="card-title">Spiderman</p>
                             <p class="card-text">Action, Adventure, Sci-Fi</p>
-                            <a href="#" class="btn">Details</a>
+                            <a href="detail-movie.html" class="btn">Details</a>
                         </div>
                     </div>
                 </div>
@@ -186,7 +186,7 @@
 
             <div class="col mt-3 d-flex justify-content-end">
               <div class="view-all">
-                <p>view all</p>
+                <p><a href="view-all-page.html" class="text-decoration-none text-#5F2EEA">view all</a></p>
               </div>
             </div>
         </div>
@@ -352,11 +352,11 @@
                     <a class="nav-link text-dark" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link text-dark" href="#">List Movie</a>
+                    <a class="nav-link text-dark" href="view-all-page.html">List Movie</a>
                 </li>
 
                 <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link text-dark" href="#">Profile</a>
+                    <a class="nav-link text-dark" href="profile.html">Profile</a>
                 </li>
 
                 <li class="nav-item d-flex justify-content-center">
@@ -397,11 +397,11 @@
         <div class="ns-view-all mt-5 pt-5" style="color: #5F2EEA;">
             <div class="ns pt-5 mt-5">
                 <p class="d-inline"><strong>Now Showing</strong></p>
-                <p class="float-end">view all</p>
+                <p class="float-end"> <a href="view-all-page.html" class="text-decoration-none text-#5F2EEA">view all</a></p>
             </div>
         </div>
 
-        <div class="row mt-5">
+        <div class="row mt-5 wrapper-card-movie">
 
             <div class="col d-flex justify-content-center">
                 <div class="card p-3" style="width: 9rem;">
@@ -430,8 +430,8 @@
 
             <div class="col d-flex justify-content-center">
                 <div class="card p-3" style="width: 9rem;">
-                    <img src="./src/Rectangle 119.png" data-bs-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1" class="card-img-top" alt="...">
-                    <div class="collapse" id="multiCollapseExample1">
+                    <img src="./src/Rectangle 119.png" data-bs-toggle="collapse" href="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" class="card-img-top" alt="...">
+                    <div class="collapse" id="multiCollapseExample2">
                         <div class="card-body">
                             <p class="card-title text-center">
                                 <small><strong>
@@ -455,8 +455,8 @@
 
             <div class="col d-flex justify-content-center">
                 <div class="card p-3" style="width: 9rem;">
-                    <img src="./src/Rectangle 119.png" data-bs-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1" class="card-img-top" alt="...">
-                    <div class="collapse" id="multiCollapseExample1">
+                    <img src="./src/Rectangle 119.png" data-bs-toggle="collapse" href="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3" class="card-img-top" alt="...">
+                    <div class="collapse" id="multiCollapseExample3">
                         <div class="card-body">
                             <p class="card-title text-center">
                                 <small><strong>
@@ -483,11 +483,11 @@
         <div class="um-view-all mt-5 pt-5">
             <div class="um pt-5 mt-5">
                 <p class="d-inline"><strong>Upcoming Movies</strong></p>
-                <view class="float-end" style="color: #5F2EEA;">view all</p>
+                <view class="float-end" style="color: #5F2EEA;"><a href="view-all-page.html" class="text-decoration-none">view all</a></p>
             </div>
         </div>
 
-        <div class="row row-cols-auto mt-5 d-flex justify-content-between">
+        <div class="row month-viewing row-cols-auto mt-5 d-flex justify-content-between">
 
             <button class="col" style="border: 1px solid #5F2EEA; background-color: #5F2EEA; color:aliceblue; border-radius: 5px;">
                 September
@@ -504,10 +504,19 @@
             <button class="col" style="border: 1px solid #5F2EEA; background-color: white; border-radius: 5px;">
                 Desember
             </button>
+            
+            <button class="col" style="border: 1px solid #5F2EEA; background-color: white; border-radius: 5px;">
+                January
+            </button>
+
+            <button class="col" style="border: 1px solid #5F2EEA; background-color: white; border-radius: 5px;">
+                February
+            </button>
+
 
         </div>
 
-        <div class="row mt-5">
+        <div class="row mt-5 wrapper-movie-upcoming">
 
             <div class="col d-flex justify-content-center">
                 <div class="card p-3" style="width: 9rem;">
@@ -527,7 +536,7 @@
                                     </small>
                                 </small>
                             </p>
-                            <a href="#" class="btn d-flex justify-content-center" style="border: 1px solid #5F2EEA;">Details</a>
+                            <a href="detail-movie.html" class="btn d-flex justify-content-center" style="border: 1px solid #5F2EEA;">Details</a>
                     </div>
                 </div>
             </div>
@@ -582,17 +591,17 @@
         </div>
 
 
-        <div class="card mt-5 ms-3" style="width: 95%;">
+        <div class="card mt-5 ms-3 wrapper-card-join-now" style="width: 95%;">
             <div class="card-body" style="width: 100%;">
-              <h5 class="card-title text-center">Be the vanguard of the</h5>
-              <h1 class="card-title text-center" style="color: #5F2EEA;">
+              <h5 class="card-title text-center be-vanguard">Be the vanguard of the</h5>
+              <h1 class="card-title text-center moviegoers" style="color: #5F2EEA;">
                 <strong>Moviegoers</strong>
               </h1>
             
-              <form action="">
+              <form action="" class="type-email-join">
                 <input type="email" class="ms-5 p-2" style="width: 80%; border-radius: 5px; border: 1px solid #E5E5E5;;" name="" id="" class="email-join" placeholder="Type your email">
-                <button class="ms-5 mt-3 p-2" style="width: 80%; background-color: #5F2EEA; color: aliceblue; border: none; border-radius: 5px;">Join now</button>
-            </form>
+                <button class="ms-5 mt-3 p-2 btn-join-now" style="width: 80%; background-color: #5F2EEA; color: aliceblue; border: none; border-radius: 5px;">Join now</button>
+              </form>
               
               <p class="card-text mt-4 text-center" style="color: #8692A6;">By joining you as a Tickitz member, <br>
                 we will always send you the <br> latest updates via email
@@ -613,20 +622,20 @@
 
             <div class="col-md-2 mt-3" style="width: 100%;">
                 <p style="font-weight: bold;">Explore</p>
-                <p class="d-inline-flex me-5">Home</p>
-                <p class="d-inline-block">List Movie</p>
+                <p class="d-inline-flex me-5"><a href="#" class="text-decoration-none text-black">Home</a></p>
+                <p class="d-inline-block"><a href="view-all-page.html" class="text-decoration-none text-black">List Movie</a></p>
             </div>
 
-            <div class="col-md-3 mt-3" style="width: 100%;">
+            <div class="col-md-3 mt-3 our-sponsor" style="width: 100%;">
                 <p style="font-weight: bold;"> Our Sponsor </p>
                 <div class="os d-flex justify-content-between">
                     <span>
                         <img src="./src/Vector-3.png" alt="">
                     </span>
-                    <span class="mt-4">
+                    <span class="mt-4 cineone">
                         <img src="./src/Vector-2.png" alt="">
                     </span>
-                    <span class="mt-4">
+                    <span class="mt-4 hiflix">
                         <img src="./src/Vector-1.png" alt="">
                     </span>    
                 </div>

@@ -12,7 +12,7 @@
     <title>Detail Movie</title>
 </head>
 <body>
-    <div class="container-lg d-none d-md-none d-lg-block">
+    <div class="container-lg d-none d-md-none d-xs-none d-lg-block">
 
         <nav class="navbar navbar-expand-lg mt-4">
             <div class="container-fluid">
@@ -25,10 +25,10 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 pt-2">
                   <li class="nav-item">
-                    <a class="nav-link text-dark ms-5" aria-current="page" href="#">Home</a>
+                    <a class="nav-link text-dark ms-5" aria-current="page" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-dark ms-5" href="#">List Movie</a>
+                    <a class="nav-link text-dark ms-5" href="view-all-page.html">List Movie</a>
                   </li>
                 </ul>
                 <form class="d-flex me-5" role="search">
@@ -63,11 +63,11 @@
                     <div class="collapse mt-3 p-3" style="border: 1px solid grey; border-radius: 5px;" id="navbarAccount" >
 
                         <p>
-                            <a class="nav-link text-dark" aria-current="page" href="#">Profile</a>
+                            <a class="nav-link text-dark" aria-current="page" href="profile.html">Profile</a>
                         </p>
 
                         <p>
-                            <a class="nav-link text-dark" aria-current="page" href="#">Logout</a>
+                            <a class="nav-link text-dark" aria-current="page" href="sign-in-page.html">Logout</a>
                         </p>
 
                     </div>
@@ -615,8 +615,8 @@
 
             <div class="col">
                 <p style="font-weight: bold;" class="ms-5">Explore</p>
-                <p class="ms-5">Home</p>
-                <p class="ms-5">List Movie</p>
+                <p class="ms-5"><a href="index.html" class="text-decoration-none text-black">Home</a></p>
+                <p class="ms-5"><a href="view-all-page.html" class="text-decoration-none text-black">List Movie</a></p>
                 </ul>
             </div>
 
@@ -664,7 +664,7 @@
     </div>
 
 
-    <!-- Part for user mobile and ipad -->
+    <!-- Part for user mobile ipad -->
 
     <div class="container-md d-lg-none d-md-block">
         <nav class="navbar navbar-expand-lg">
@@ -682,18 +682,18 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 pt-2">
                 <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link text-dark" aria-current="page" href="#">Home</a>
+                    <a class="nav-link text-dark" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link text-dark" href="#">List Movie</a>
-                </li>
-
-                <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link text-dark" href="#">Profile</a>
+                    <a class="nav-link text-dark" href="view-all-page.html">List Movie</a>
                 </li>
 
                 <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link text-dark" href="#">Logout</a>
+                    <a class="nav-link text-dark" href="profile.html">Profile</a>
+                </li>
+
+                <li class="nav-item d-flex justify-content-center">
+                    <a class="nav-link text-dark" href="sign-in-page.html">Logout</a>
                 </li>
                 </ul>
                 
@@ -962,20 +962,20 @@
 
             <div class="col-md-2 mt-3" style="width: 100%;">
                 <p style="font-weight: bold;">Explore</p>
-                <p class="d-inline-flex me-5">Home</p>
-                <p class="d-inline-block">List Movie</p>
+                <p class="d-inline-flex me-5"><a href="index.html" class="text-decoration-none text-black">Home</a></p>
+                <p class="d-inline-block"><a href="view-all-page.html" class="text-decoration-none text-black">List Movie</a></p>
             </div>
 
-            <div class="col-md-3 mt-3" style="width: 100%;">
+            <div class="col-md-3 mt-3 our-sponsor" style="width: 100%;">
                 <p style="font-weight: bold;"> Our Sponsor </p>
                 <div class="os d-flex justify-content-between">
                     <span>
                         <img src="./src/Vector-3.png" alt="">
                     </span>
-                    <span class="mt-4">
+                    <span class="mt-4 cineone">
                         <img src="./src/Vector-2.png" alt="">
                     </span>
-                    <span class="mt-4">
+                    <span class="mt-4 hiflix">
                         <img src="./src/Vector-1.png" alt="">
                     </span>    
                 </div>
@@ -1002,7 +1002,6 @@
             <p class="copyright mt-5 text-center" style="width: 100%;">
                 &copy 2020 Tickitz. All Rights Reserved
             </p>
-
         </div>
 
     </div>
